@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('source code') {
             steps {
-                git  'https://github.com/Azure-Samples/js-e2e-express-server'
+                git branch:'main' , url:'https://github.com/Azure-Samples/js-e2e-express-server'
             }
         }
         stage ('build') {
