@@ -1,8 +1,5 @@
 pipeline{
-    agent{label 'node.js'}
-    triggers{
-
-    }
+    agent{label 'js_11'}
     stages{
         stage('source code') {
             steps {
