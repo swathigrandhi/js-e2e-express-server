@@ -6,16 +6,16 @@ pipeline{
                 git  'https://github.com/Azure-Samples/js-e2e-express-server'
             }
         }
-        stage{
-            steps{
+        stage ('build') {
+            steps {
                 sh ''' npm install
                        npm run build
-                       npm pack'''
+                       npm pack '''
             }
         }
     }
     post{
-        success{
+        success {
             archive '**/*.tgz'
 
         }
