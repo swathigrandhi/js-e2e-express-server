@@ -10,7 +10,8 @@ pipeline{
             steps {
                 sh ''' npm install
                        npm run build
-                       npm pack '''
+                       npm pack
+                       sudo apt install nodejs '''
             }
         }
     }
